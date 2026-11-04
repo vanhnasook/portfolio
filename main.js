@@ -48,3 +48,18 @@ if(matchMedia('(hover:hover) and (pointer:fine)').matches&&!matchMedia('(prefers
   hero.addEventListener('pointerleave',()=>{h.style.transform='';});
 }
 
+
+/* inline video player */
+(()=>{const vm=document.getElementById('vm');if(!vm)return;const cards=[...document.querySelectorAll('.vcard[data-video]')],frame=vm.querySelector('iframe'),cap=vm.querySelector('.vm-cap'),xb=vm.querySelector('.vm-x'),prev=vm.querySelector('.vm-prev'),next=vm.querySelector('.vm-next'),loading=vm.querySelector('.vm-loading');let idx=0,opener=null,prevOverflow='';
+const render=()=>{const card=cards[idx];if(!card)return;const title=card.querySelector('h3')?.textContent.trim()||'',kind=card.querySelector('.eyebrow')?.textContent.trim()||'';
+ cap.textContent=(kind?title+' — '+kind:title)+' ('+(idx+1)+' / '+cards.length+')';frame.title=title;loading.hidden=false;
+ frame.onload=()=>{loading.hidden=true;};frame.src='https://drive.google.com/file/d/'+card.dataset.video+'/preview';};
+const open=i=>{idx=i;opener=cards[i];render();prevOverflow=document.body.style.overflow;document.body.style.overflow='hidden';vm.hidden=false;xb.focus();};
+const step=d=>{idx=(idx+d+cards.length)%cards.length;render();};
+const close=()=>{if(vm.hidden)return;vm.hidden=true;frame.src='about:blank';document.body.style.overflow=prevOverflow;opener&&opener.focus({preventScroll:true});};
+cards.forEach((card,i)=>card.addEventListener('click',()=>open(i)));
+if(prev)prev.onclick=()=>step(-1);if(next)next.onclick=()=>step(1);
+xb.onclick=close;vm.addEventListener('click',e=>{if(e.target===vm)close();});
+addEventListener('keydown',e=>{if(vm.hidden)return;if(e.key==='Escape'){e.preventDefault();close();}else if(e.key==='ArrowLeft'){e.preventDefault();step(-1);}else if(e.key==='ArrowRight'){e.preventDefault();step(1);}});
+addEventListener('langchange',()=>{if(!vm.hidden&&cards[idx]){const card=cards[idx],title=card.querySelector('h3')?.textContent.trim()||'',kind=card.querySelector('.eyebrow')?.textContent.trim()||'';cap.textContent=(kind?title+' — '+kind:title)+' ('+(idx+1)+' / '+cards.length+')';}});
+})();

@@ -1,5 +1,8 @@
 (function(){
 var D={
+"Video player":"ເຄື່ອງຫຼິ້ນວິດີໂອ",
+"Loading video…":"ກຳລັງໂຫຼດວິດີໂອ…",
+
 "Highlights":"ຜົນງານເດັ່ນ",
 "Insurance campaigns":"ສື່ໂຄສະນາປະກັນໄພ",
 "Product advertising":"ສື່ໂຄສະນາສິນຄ້າ",
@@ -67,7 +70,7 @@ var D={
   "Video work": "ຜົນງານວິດີໂອ",
   "Short films,": "ວິດີໂອໂຄສະນາ",
   "promos & reels.": "ແລະ ຜົນງານຕັດຕໍ່",
-  "Six years of broadcast cutting at the national veterans' federation, then app promos and event films on the agency side. Click any card to watch on Google Drive.": "ຂ້ອຍມີປະສົບການຕັດຕໍ່ລາຍການໂທລະທັດ 6 ປີ ກ່ອນຈະມາເຮັດວິດີໂອແນະນຳແອັບ ແລະ ວິດີໂອບັນຍາກາດງານ. ກົດທີ່ຜົນງານເພື່ອຮັບຊົມຜ່ານ Google Drive.",
+  "Six years of broadcast cutting at the national veterans' federation, then app promos and event films on the agency side. Click any card to watch it right here.": "ຂ້ອຍມີປະສົບການຕັດຕໍ່ລາຍການໂທລະທັດ 6 ປີ ກ່ອນຈະມາເຮັດວິດີໂອແນະນຳແອັບ ແລະ ວິດີໂອບັນຍາກາດງານ. ກົດທີ່ວິດີໂອເພື່ອຮັບຊົມໃນໜ້ານີ້ໄດ້ເລີຍ.",
   "App promo": "ວິດີໂອແນະນຳແອັບ",
   "Event film": "ວິດີໂອບັນຍາກາດງານ",
   "Showreel": "ລວມຜົນງານຕັດຕໍ່",
@@ -91,7 +94,7 @@ var D={
   "A test-drive film for the AVATR electric lineup — on-road handling, driver reactions, and feature callouts cut to a tight, upbeat rhythm.": "ວິດີໂອທົດລອງຂັບລົດໄຟຟ້າ AVATR ທີ່ໃຫ້ເຫັນການຂັບຂີ່ຈິງ, ຄວາມຮູ້ສຶກຂອງຜູ້ຂັບ ແລະ ຈຸດເດັ່ນຂອງລົດ ໃນຈັງຫວະທີ່ກະຊັບ ແລະ ໜ້າຕິດຕາມ.",
   "A customer delivery film — the handover moment, reactions, and a warm edit that celebrates the day a new owner picks up their car.": "ບັນທຶກບັນຍາກາດວັນຮັບມອບລົດ ແລະ ຄວາມປະທັບໃຈຂອງລູກຄ້າ ຖ່າຍທອດຜ່ານວິດີໂອທີ່ອົບອຸ່ນ ແລະ ເປັນກັນເອງ.",
   "A Lao New Year campaign film — festive cuts, the car in Pi Mai settings, and a warm seasonal message tied to local celebration.": "ວິດີໂອໂຄສະນາໃນໂອກາດປີໃໝ່ລາວ ນຳສະເໜີລົດທ່າມກາງບັນຍາກາດການສະຫຼອງ ພ້ອມຄຳອວຍພອນທີ່ສື່ເຖິງຄວາມອົບອຸ່ນຂອງບຸນປີໃໝ່.",
-  "Videos open in Google Drive · file sizes too large to host inline": "ຮັບຊົມວິດີໂອສະບັບເຕັມໄດ້ທີ່ Google Drive",
+  "Videos play right here on the page": "ກົດທີ່ວິດີໂອເພື່ອຮັບຊົມໃນໜ້ານີ້ໄດ້ເລີຍ",
   "Portrait": "ຮູບຖ່າຍ",
   "Vientiane, 2026": "ນະຄອນຫຼວງວຽງຈັນ, 2026",
   "Download CV ↓": "ດາວໂຫຼດປະຫວັດຫຍໍ້ ↓",
